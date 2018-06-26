@@ -12,4 +12,4 @@ sudo make check
 sudo make install
 cd /home/pi/.node-red
 sudo npm install --unsafe-perm -g node-dht-sensor
-sudo npm install --unsafe-perm node-red-contrib-dht-sensor
+npm install --unsafe-perm node-red-contrib-dht-sensor
