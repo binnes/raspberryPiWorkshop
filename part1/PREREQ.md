@@ -8,7 +8,7 @@
 
 ## Lab Objectives
 
-This Lab will ensure you have all the resources and software needed to complete the lab.  You should follow the instructions and complete all sections of the setup before moving forward with the Lab.
+This Lab will ensure you have all the resources and software needed to complete the workshop.  You should follow the instructions and complete all sections of the setup before moving forward with the Lab.
 
 ## Raspberry Pi development
 
@@ -33,21 +33,23 @@ You need to purchase the following hardware to work through the workshop.  There
 - SenseHAT, which is an add on board for the Raspberry pi
 - DHT11 sensor with neopixel RGB LED.  
 
-Both the options provide temperature and humidity readings and provide a feedback mechanism by displaying different colours.  You can only use 1 option as the SenseHAT and DHT/neopixel cannot be simultaneously connected to the Raspberry Pi
+Both the options provide temperature and humidity readings and provide a feedback mechanism by displaying different colours on LED(s).  You can only use 1 of the options as the SenseHAT and DHT/neopixel cannot be simultaneously connected to the Raspberry Pi
 
 If choosing the DHT sensor and neopixel option, the workshop instructions uses the DHT11 temperature and humidity sensor.  This can be replaced with the DHT22 sensor, which has the same pinout, but offers a more accurate sensor.  DHT11 is accurate within 2C, whilst the DHT22 is accurate to within 0.5C.
 
 There are a number of version of Raspberry Pi available.  This workshop should work with all versions of the Raspberry Pi, but the SenseHAT will only work with newer versions that have the 40 pin connector (older Pis have only 26 connector pins).  The Recommended version is the Raspberry Pi 3 Model B or Model B+
 
+### Hardware list
+
 - Raspberry Pi (search for **Raspberry Pi 3 model B+**)
 - MicroUSB cable or Raspberry Pi power supply
 - Micro SD card, minimum 8GB (an adapter is also needed to flash the card using your laptop or workstation, this may be a micro-full size SD adapter if your laptop has an SD card slot or a USB to SD card adapter) (search for **micro SD card 8GB**).
 - One of the following sections:
-    - SenseHAT (search for **SenseHAT**)
+  - SenseHAT (search for **SenseHAT**)
 - OR
-    - NeoPixel RGB LED (or any other chainable RGB/RGBW LED based on ws2812b or sk6812 chips ), such as [this from Adafruit](https://www.adafruit.com/product/1734) (Search for **Neopixel 8mm or 5mm** - often sold in packs of 5)
-    - DHT11 Temperature / Humidity Sensor (search for **DHT11 or DHT22**)
-    - 6 x Female to Female jumper wires (search for **dupont cable f2f or f-f** - usually sold in packs of 40 cables)
+  - NeoPixel RGB LED (or any other chain-able RGB/RGBW LED based on ws2812b or sk6812 chips ), such as [this from Adafruit](https://www.adafruit.com/product/1734) (Search for **Neopixel 8mm or 5mm** - often sold in packs of 5)
+  - DHT11 Temperature / Humidity Sensor (search for **DHT11 or DHT22**)
+  - 6 x Female to Female jumper wires (search for **dupont cable f2f or f-f** - usually sold in packs of 40 cables)
 
 ## Installing the required software on your system
 
@@ -63,17 +65,20 @@ Finally you will need to be able to access the Raspberry Pi graphical user inter
 
 ## Pi setup and first boot
 
-For a face-to-face workshop you should have a Raspberry Pi that has already been setup.  
+For a face-to-face workshop you should have a Raspberry Pi that has already been setup.
 
-You should have been notified of the hostname and password for your Raspberry Pi.  You can connect to the Raspberry Pi using zeroConf by adding **.local** to the pi hostname.
+If you are setting up a Pi, then the recommended approach is to use [PiBakery](http://www.pibakery.org).  You need to download and install the application then launch PiBakery on your laptop and import the **ras3B-workshop.xml** file from the [scripts](../scripts) directory of this repo.  You need to change the WiFi settings and optionally change the hostname and password.  When you've made the required changes write the image to a SD card, then when finished insert the SD card into your raspberry Pi and power on.  The first boot will take a few minutes as additional configuration and software package installations need to complete.
+
+![Pi Bakery](images/piBakery.png)
+
+You should have been notified of the hostname and password for your Raspberry Pi.  You can connect to the Raspberry Pi using zeroConf by adding **.local** to the pi hostname.  The default user name is **pi**.
 
 Power up the Raspberry Pi by connecting the micro USB connector from a power adapter or microUSB cable connected to your laptop USB port.  Your Raspberry Pi should boot and automatically connect to the WiFi.
 
 ### Ways of connecting to the Pi
 
 In the following commands replace `<hostname>` with the hostname of your Raspberry Pi:
+
 - Command line : in a terminal (or putty if on windows) use command `ssh pi@<hostname>.local`
 - VNC : Launch the application and enter `<hostname>.local` as the Raspberry Pi server name
 - Node-RED : In a browser enter `http://<hostname>.local:1880` as the URL
-
-
