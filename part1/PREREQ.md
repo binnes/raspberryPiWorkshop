@@ -1,7 +1,7 @@
 *Quick links :*
 [Home](/README.md) - [**Part 1**](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)
 ***
-**Part 1** - [**Setup**](/part1/PREREQ.md) - [First App](/part1/FIRSTAPP.md) - [WIFI](/part1/WIFI.md) - [LED](/part1/LED.md) - [DHT](/part1/DHT.md) - [Cloud](/part1/IOTCLOUD.md)
+**Part 1** - [**Setup**](/part1/PREREQ.md) - [First Flow](/part1/FIRSTFLOW.md) - [Install Nodes](/part1/INSTALLNODE.md) - [Node-RED Context](/part1/CONTEXT.md) - [Sensors](/part1/SENSORS.md) - [SenseHAT](/part1/SENSEHAT.md) - [Additional Nodes](/part1/ADDITIONALNODES.md) - [Cloud](/part1/IOTCLOUD.md)
 ***
 
 # Installing the prerequisite software and getting your cloud account setup
@@ -65,20 +65,28 @@ Finally you will need to be able to access the Raspberry Pi graphical user inter
 
 ## Pi setup and first boot
 
+### Face to face workshop
+
 For a face-to-face workshop you should have a Raspberry Pi that has already been setup.
-
-If you are setting up a Pi, then the recommended approach is to use [PiBakery](http://www.pibakery.org).  You need to download and install the application then launch PiBakery on your laptop and import the **ras3B-workshop.xml** file from the [scripts](../scripts) directory of this repo.  You need to change the WiFi settings and optionally change the hostname and password.  When you've made the required changes write the image to a SD card, then when finished insert the SD card into your raspberry Pi and power on.  The first boot will take a few minutes as additional configuration and software package installations need to complete.
-
-![Pi Bakery](images/piBakery.png)
 
 You should have been notified of the hostname and password for your Raspberry Pi.  You can connect to the Raspberry Pi using zeroConf by adding **.local** to the pi hostname.  The default user name is **pi**.
 
-Power up the Raspberry Pi by connecting the micro USB connector from a power adapter or microUSB cable connected to your laptop USB port.  Your Raspberry Pi should boot and automatically connect to the WiFi.
+### Self-setup
+
+If you are setting up a Pi, then the recommended approach is to use [PiBakery](http://www.pibakery.org).  You need to download and install the application then launch PiBakery on your laptop and import the **ras3B-workshop.xml** file from the [scripts](../scripts) directory of this repo.  You need to change the WiFi settings and optionally change the hostname and password.  When you've made the required changes write the image to a SD card, then when finished insert the SD card into your raspberry Pi and power on.
+
+![Pi Bakery](images/piBakery.png)
 
 ### Ways of connecting to the Pi
+
+Power up the Raspberry Pi by connecting the micro USB connector from a power adapter or microUSB cable connected to your laptop USB port.  Your Raspberry Pi should boot and automatically connect to the WiFi.  The first boot may take a few minutes, as additional software is installed on first boot.
 
 In the following commands replace `<hostname>` with the hostname of your Raspberry Pi:
 
 - Command line : in a terminal (or putty if on windows) use command `ssh pi@<hostname>.local`
 - VNC : Launch the application and enter `<hostname>.local` as the Raspberry Pi server name
 - Node-RED : In a browser enter `http://<hostname>.local:1880` as the URL
+
+***
+*Quick links :*
+[Home](/README.md) - [**Part 1**](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)
