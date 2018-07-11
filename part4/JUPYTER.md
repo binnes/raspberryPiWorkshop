@@ -15,9 +15,11 @@ In this lab you will read IoT data into a Watson Studio Project Jupyter Notebook
 - Calculate the Average, Standard Deviation, and Find the Min/Max
 
 ### Introduction
+
 Jupyter Notebook is a web-based interactive computational environment for interactive data science and scientific computing. A Jupyter Notebook document is a JSON document, following a versioned schema, and containing an ordered list of input/output cells which can contain code, text (using Markdown), mathematics, plots and rich media, usually ending with the ".ipynb" extension. A Jupyter kernel is a program responsible for handling various types of request (code execution, code completions, inspection), and providing a reply.
 
 ### Step 1 - Cloudant Credentials
+
 Before we can read the temperature and humidity data into a Jupyter notebook we need to create credentials to the Cloudant database created in the [Part 3 - Store Data in Cloud Storage](../part3/CLOUDANT.md) section.
 
 - Open a new browser tab.
@@ -53,5 +55,6 @@ Before we can read the temperature and humidity data into a Jupyter notebook we 
 - In the toolbar, click on the **Run** button to run each cell.
 - Spark will calculate the Average, Standard Deviation, Max and Min of your ESP8266 IoT Historical data set.
 
+***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [**Part 4**](/part4/README.md)

@@ -14,18 +14,21 @@ In this lab you will modify the Raspberry Pi Node-RED flow to receive MQTT comma
 - How to receive MQTT commands in Node-RED on the Raspberry Pi
 
 ### Introduction
+
 Remote management and control of IoT Devices is critical to managing the flow of sensor data to the Cloud. Hard coded values in the IoT Device should be replaced by dynamically controlled logic in the Cloud.
 
 This section will build a Node-RED flow where you can change the LED color and temperature thresholds.  A MQTT command will be published from the IBM Cloud to the Raspberry Pi device. The Raspberry Pi will receive the display update and set the LED color.
 
 ### Step 1 - Import the Node-RED Dashboard Reporting Interval Form Flow
-* Open the “Get the Code” github URL listed below, mark or Ctrl-A to select all of the text, and copy the text for the flow to your Clipboard. Recall from a previous section, click on the Node-RED Menu, then Import, then Clipboard. Paste the text of the flow into the Import nodes dialog and press the red Import button.
+
+- Open the “Get the Code” github URL listed below, mark or Ctrl-A to select all of the text, and copy the text for the flow to your Clipboard. Recall from a previous section, click on the Node-RED Menu, then Import, then Clipboard. Paste the text of the flow into the Import nodes dialog and press the red Import button.
 
 <p align="center">
   <strong>Get the Code: <a href="flows/NR-SetLED-Threshold.json">Node-RED Set LED Threshold Flow</strong></a>
 </p>
 
-* Click the **Deploy** button on the top of menu bar to deploy the Node-RED flow.
+- Click the **Deploy** button on the top of menu bar to deploy the Node-RED flow.
+
 ![Node-RED Set LED flow screenshot](screenshots/Node-RED-SetLED-flow.png)
 
 ### Step 2 - Node-RED Set LED flow on the IBM Cloud
@@ -39,7 +42,9 @@ This section will build a Node-RED flow where you can change the LED color and t
 
 - Double-click on the Switch node. An **Edit switch node** sidebar will open.
 - The **Switch** node checks the temperature and depending on the value, chooses the Threshold color.
+
 ![Node-RED Dashboard Form flow node](screenshots/Node-RED-SetLED-Switchnode.png)
+
 - Press the Cancel button when you have finished reviewing the switch node.
 
 ### Step 4 - Send MQTT Commands using IBM IoT Node
@@ -58,5 +63,6 @@ This section will build a Node-RED flow where you can change the LED color and t
 
 Proceed to [**Part 4**](/part4/README.md)
 
+***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [**Part 3**](/part3/README.md) - [Part 4](/part4/README.md)

@@ -26,7 +26,7 @@ In just a few nodes, Node-RED can receive the data that was transmitted from a d
 - Uncheck All and set the Device Type to **Raspberry** (3).
 - Uncheck All and set the Event **status** (4).
 - Click on the red **Done** button.
- ![Receive DHT Data](screenshots/ESP8266-ReceiveDHTdata-IoTnode.png)
+ ![Receive Data](screenshots/ESP8266-ReceiveDHTdata-IoTnode.png)
 
 ### Step 2 - Extract the Temperature from the JSON Object
 
@@ -55,12 +55,14 @@ In just a few nodes, Node-RED can receive the data that was transmitted from a d
 
 ### Step 4 - Wire the Node-RED nodes together
 
-- Wire the Node-RED nodes together by click / dragging your mouse from nodelet to nodelet as show in the screenshot.
+- Wire the Node-RED nodes together by click / dragging your mouse from node connector to node connector as show in the screenshot.
 - Click on the red **Deploy** button in the upper right corner.
- - Observe the DHT sensor data in the **debug** tab of the Node-RED right sidebar.  You can expand the twisties to expose the JSON object information. Hover over a debug message in the right sidebar and the node that generated the message will be outlined in orange.
+- Observe the DHT sensor data in the **debug** tab of the Node-RED right sidebar.  You can expand the twisties to expose the JSON object information. Hover over a debug message in the right sidebar and the node that generated the message will be outlined in orange.
+
   ![Receive DHT Data](screenshots/ESP8266-ReceiveDHTdata-Deploy.png)
 
 Proceed to the next section - [**Plot Sensor Data**](/part3/DASHBOARD.md)
 
+***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [**Part 3**](/part3/README.md) - [Part 4](/part4/README.md)

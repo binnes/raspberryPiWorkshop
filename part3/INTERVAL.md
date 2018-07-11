@@ -15,6 +15,7 @@ In this lab you will modify the Raspberry Pi Node-RED flow to receive MQTT comma
 - How to receive MQTT commands within your Node-RED
 
 ### Introduction
+
 Remote management and control of IoT Devices is critical to managing the flow of sensor data to the Cloud. The IoT Device might only need to check in occasionally during quiet periods of inactivity. Waking up the device and requesting that it report sensor data more frequently during active time periods is better for power management, bandwidth consumption and cloud storage.
 
 This section will build a Node-RED Dashboard Form where you can enter a new reporting interval.  A MQTT command will be published from the IBM Cloud to the device. The Raspberry Pi will receive the interval update and adjust how often it transmits the DHT environmental sensor data.
@@ -27,8 +28,9 @@ This section will build a Node-RED Dashboard Form where you can enter a new repo
   <strong>Get the Code: <a href="flows/NRD-ReportingInterval-Form.json">Node-RED Dashboard Reporting Interval Form Flow</strong></a>
 </p>
 
-* Turn to the *Set ESP8266 Interval* flow tab.
-* Click the **Deploy** button on the top of menu bar to deploy the Node-RED flow.
+- Turn to the *Set ESP8266 Interval* flow tab.
+- Click the **Deploy** button on the top of menu bar to deploy the Node-RED flow.
+
 ![Node-RED Dashboard Form flow screenshot](screenshots/NRD-ReportingIntervalForm-flow.png)
 
 ### Step 2 - Node-RED Dashboard Form node
@@ -37,9 +39,11 @@ This section will build a Node-RED Dashboard Form where you can enter a new repo
 - After entering the form data, the user can press **Submit** or **Cancel** buttons.
 - When the **Submit** button is pressed the flow constructs a ```msg.payload``` JSON Object with the values entered.
 - Double-click on the Dashboard Form node (1). An **Edit form node** sidebar will open.
-- This form only has one element (2). It asks in a field labeled *Reporting Interval* for a numeric value. This value will be stored in a variable named *Seconds*
+- This form only has one element (2). It asks in a field labelled *Reporting Interval* for a numeric value. This value will be stored in a variable named *Seconds*
 - You might experiment by adding additional elements (3) that could prompt for Text, Numbers, validated email addresses, Passwords (which will be masked when input as * ), Checkmarks or Switches.
+
 ![Node-RED Dashboard Form flow node](screenshots/NRD-ReportingIntervalForm-formnode.png)
+
 - Press the Cancel button when you have finished experimenting with the form node.
 
 ### Step 3 - Description of the Set ESP8266 Interval flow
@@ -51,10 +55,11 @@ This section will build a Node-RED Dashboard Form where you can enter a new repo
 - The resulting JSON Object is passed to an **IBM IoT out** node.
 
 ### Step 4 - Send MQTT Commands using IBM IoT Node
-* Double-click on the IBM IoT node (4). An **Edit ibmiot out node** sidebar will open.
-* The **IBM IoT out** node is configured to send a **Device Command** (5) to your device Id.
-* The **Command Type** will be named *interval* (6).
-* Press the red Done button.
+
+- Double-click on the IBM IoT node (4). An **Edit ibmiot out node** sidebar will open.
+- The **IBM IoT out** node is configured to send a **Device Command** (5) to your device Id.
+- The **Command Type** will be named *interval* (6).
+- Press the red Done button.
 
 ![Node-RED Dashboard Form flow node](screenshots/NRD-ReportingIntervalForm-iotnode.png)
 
@@ -76,5 +81,6 @@ This section will build a Node-RED Dashboard Form where you can enter a new repo
 
 Proceed to the next section - [**Control ESP8266 LED**](/part3/LED.md)
 
+***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [**Part 3**](/part3/README.md) - [Part 4](/part4/README.md)

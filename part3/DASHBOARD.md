@@ -16,9 +16,11 @@ In this lab you will import Node-RED flows which create Dashboard Charts. After 
 - Trigger alerts when the real-time sensor data exceeds a threshold value
 
 ### Introduction
+
 In this section you will learn about Node-RED Dashboard Charts and then create a chart to graph the sensor data arriving from the Raspberry Pi.
 
 ### Step 1 - Import the Node-RED Dashboard Chart Flows
+
 Open the “Get the Code” github URL listed below, mark or Ctrl-A to select all of the text, and copy the text for the flow to your Clipboard. Recall from a previous section, click on the Node-RED Menu, then Import, then Clipboard. Paste the text of the flow into the Import nodes dialog and press the red Import button. Finally, click on the red **Deploy** button in the upper right corner.
 
 <p align="center">
@@ -50,7 +52,6 @@ The next Node-RED flow - **Dashboard Intro** - uses a variety of UI widgets to d
 
 ![Node-RED Dashboard Intro dashboard](screenshots/Node-RED-Dashboard-Intro.png)
 
-
 ### Step 4 - Plot Environmental Sensor Data
 
 Now that you have learned about Node-RED Dashboard and Chart types, you are ready to plot the real-time environmental sensor data.
@@ -61,6 +62,7 @@ Now that you have learned about Node-RED Dashboard and Chart types, you are read
 - The environmental sensor values are sent to two charts to plot Temperature and Humidity.
  ![NRD ESP8266 DHT chart flow](screenshots/Node-RED-Dashboard-DHT-flow.png)
 - Turn to the Node-RED Dashboard browser tab that you launched in Step 2, click on the tab in the upper left corner, and select the **ESP8266 Workshop** tab.
+
 <p align="center">
 <img height="395" width="282" src="screenshots/NRD-ESP8266-DHT-TempHum-Chart.png">
 </p>
@@ -68,6 +70,7 @@ Now that you have learned about Node-RED Dashboard and Chart types, you are read
 ### Step 5 - Trigger Alerts when Real-Time Sensor Data Exceeds a Threshold Value
 
 Often IoT devices and sensors are deployed so that alerts can be triggered when the real time sensor data exceeds a threshold value.  In this last Step, the flow checks the temperature values and, if the temperature exceeds the threshold, triggers a Node-RED Dashboard notification.
+
 - In the prior step, the flow included three nodes that have not yet been discussed.
 - A **Switch** node is configured to *Warn on High Values* by testing if ```msg.payload.d.temp``` is greater than 30C.
 - A **Template** node is configured to construct a sentence ```Alert : Critical Value Detected {{payload.d.temp}}```
@@ -76,7 +79,7 @@ Often IoT devices and sensors are deployed so that alerts can be triggered when 
 
  ![NRD ESP8266 DHT chart flow](screenshots/Node-RED-Dashboard-DHT-flow.png)
 
- - Return to the Node-RED Dashboard **ESP8266 Workshop** tab and increase the temperature of your DHT sensor above 30C.
+- Return to the Node-RED Dashboard **ESP8266 Workshop** tab and increase the temperature of your DHT sensor above 30C.
 
  <p align="center">
  <img height="395" width="282" src="screenshots/NRD-ESP8266-DHT-TempHum-ChartAlert.png">
@@ -84,5 +87,6 @@ Often IoT devices and sensors are deployed so that alerts can be triggered when 
 
 Proceed to the next section - [**Store Sensor Data**](/part3/CLOUDANT.md)
 
+***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [**Part 3**](/part3/README.md) - [Part 4](/part4/README.md)

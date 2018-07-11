@@ -15,6 +15,7 @@ In this lab you will set up Watson Studio with a new Project.  You will learn:
 - How to create a Jupyter Notebook
 
 ### Introduction
+
 Watson Studio accelerates the machine and deep learning workflows required to infuse AI into your business to drive innovation. It provides a suite of tools for data scientists, application developers and subject matter experts, allowing them to collaboratively connect to data, wrangle that data and use it to build, train and deploy models at scale. Successful AI projects require a combination of algorithms + data + team, and a very powerful compute infrastructure.
 
 - Learn more from the Experts - [Introducing IBM Watson Studio](https://medium.com/ibm-watson/introducing-ibm-watson-studio-e93638f0bb47)
@@ -36,7 +37,9 @@ Watson Studio accelerates the machine and deep learning workflows required to in
 - Click on **New project**
 - Make sure to enable **Jupyter Notebooks**
 - Press the **OK** button.
+
 ![Watson Studio New project screenshot](screenshots/WatsonStudio-NewProject.png)
+
 - Give your Project a name - **RaspberryPi**
 - Press the **Create** button.
 - Press the Settings tab.
@@ -54,28 +57,33 @@ Watson Studio accelerates the machine and deep learning workflows required to in
 - Select **From URL**
 - Give the notebook a name: **IoT Sensor Analytics**
 - Select **From URL**
-- Import the notebook from this URL
-https://raw.githubusercontent.com/binnes/esp8266Workshop/master/part4/notebooks/ESP8266-DHT-IoT-Sensor-Analytics.ipynb
-- Scoll down to the **Select runtime** dropdown and choose your **Spark** service
+- Import the notebook from this URL https://raw.githubusercontent.com/binnes/esp8266Workshop/master/part4/notebooks/ESP8266-DHT-IoT-Sensor-Analytics.ipynb
+- Scroll down to the **Select runtime** dropdown and choose your **Spark** service
+
 ![Watson Studio New notebook screenshot](screenshots/WatsonStudio-NewNotebook.png)
+
 - Click on **Create Notebook**
+
 ![Watson Studio New notebook screenshot](screenshots/WatsonStudio-NewNotebook-install.png)
+
 - Before running this notebook, an additional connector notebook needs to be installed.
 
 ## Step 4 - Create an Apache Bahir Connector Notebook
+
 This will install the Apache Bahir connector within your Project/Apache Spark service. If you restart the kernel or start a new notebook in the same project you can use Apache Bahir for connecting to the Cloudant/Apache CouchDB service.
 
 - From the top menu, select **Tools**, and then **Notebook**
 - Select **From URL**
 - Give the notebook a name: **Apache Bahir**
-- Import the notebook from this URL
-https://raw.githubusercontent.com/romeokienzler/developerWorks/master/coursera/bahir_setup.ipynb
-- Scoll down to the **Select runtime** dropdown and choose **DSX-Spark**
+- Import the notebook from this URL https://raw.githubusercontent.com/romeokienzler/developerWorks/master/coursera/bahir_setup.ipynb
+- Scroll down to the **Select runtime** dropdown and choose **DSX-Spark**
 - Click on **Create Notebook**
 - Once it loads, click on the **> Run** button twice.
+
   ![Watson Studio Apache Bahir notebook run screenshot](screenshots/WatsonStudio-Notebook-ApacheBahir.png)
 
-You are now ready to analyze IoT historical dataset using a Jupyter notebook and Spark. Proceed to the [Jupyter notebook lab](/part4/JUPYTER.md).
+You are now ready to analyse IoT historical dataset using a Jupyter notebook and Spark. Proceed to the [Jupyter notebook lab](/part4/JUPYTER.md).
 
+***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [**Part 4**](/part4/README.md)

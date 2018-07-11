@@ -44,6 +44,7 @@ Each time you connect the device the token will need to be presented to the serv
 Enter a token for your device then press **Next**.  You will see a summary of the device.  Press **Done** to complete the device registration.  You are now shown a device Drilldown page - this is the last chance you get to see the token.  Once you leave this page the token can not be recovered. Write down the Org, Device Type, Device ID and Authentication Token. You might even consider taking a screen shot.
 
 Proceed to the next section [**Secure communication**](/part2/CERT1.md)
+
 ***
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [**Part 2**](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)
