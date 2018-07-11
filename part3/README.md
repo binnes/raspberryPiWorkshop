@@ -1,5 +1,5 @@
 *Quick links :*
-[Home](/README.md) - [**Part 1**](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)
+[Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)
 ***
 
 # Part 3
@@ -12,11 +12,11 @@ Note:  All but the last section in this part of the workshop can be completed wi
 
 ## Receive Environmental Sensor Data in Node-RED -10 min
 
-- practical [**Raspberry Pi Environmental Sensor Data**](/part3/DHTDATA.md)
+- practical [**Environmental Sensor Data**](/part3/DHTDATA.md)
 
 ## Node-RED Dashboard - Real Time Chart - 15 min
 
-- practical [**Plot DHT Sensor Data**](/part3/DASHBOARD.md)
+- practical [**Plot Sensor Data**](/part3/DASHBOARD.md)
 
 ## Store data in Cloudant storage - 10 min
 
@@ -26,7 +26,7 @@ Note:  All but the last section in this part of the workshop can be completed wi
 
 - practical [**Read Cloud Storage and Plot History Chart**](/part3/HISTORY.md)
 
-## Control your ESP8266 reporting interval via a Node-RED Dashboard Form - 20 min
+## Control your reporting interval via a Node-RED Dashboard Form - 20 min
 
 - practical [**Change the Sensor Reporting Interval Dynamically**](/part3/INTERVAL.md)
 
@@ -36,4 +36,4 @@ Note:  All but the last section in this part of the workshop can be completed wi
 
 ***
 *Quick links :*
-[Home](/README.md) - [**Part 1**](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)
+[Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [Part 4](/part4/README.md)

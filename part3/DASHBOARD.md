@@ -4,11 +4,11 @@
 **Part 3** - [Intro to Node-RED](/part3/NODERED.md) - [Receive Sensor Data](/part3/DHTDATA.md) - [**Plot Data**](/part3/DASHBOARD.md) - [Store Data](/part3/CLOUDANT.md) - [Historical Data](/part3/HISTORY.md) - [Control Interval](/part3/INTERVAL.md) - [Control LED](/part3/LED.md)
 ***
 
-# Node-RED Dashboard Charts - Plot DHT Sensor Data
+# Node-RED Dashboard Charts - Plot Sensor Data
 
 ## Lab Objectives
 
-In this lab you will import Node-RED flows which create Dashboard Charts. After learning about Node-RED Dashboard Charts, you will be able to display temperature and humidity graphs of the Raspberry Pi DHT environmental sensors.  You will learn:
+In this lab you will import Node-RED flows which create Dashboard Charts. After learning about Node-RED Dashboard Charts, you will be able to display temperature and humidity graphs for the environmental sensors.  You will learn:
 
 - How to create a Node-RED Dashboard
 - Experiment with Chart types
@@ -16,7 +16,7 @@ In this lab you will import Node-RED flows which create Dashboard Charts. After 
 - Trigger alerts when the real-time sensor data exceeds a threshold value
 
 ### Introduction
-In this section you will learn about Node-RED Dashboard Charts and then create a chart to graph the sensor data arriving from the ESP8266.
+In this section you will learn about Node-RED Dashboard Charts and then create a chart to graph the sensor data arriving from the Raspberry Pi.
 
 ### Step 1 - Import the Node-RED Dashboard Chart Flows
 Open the “Get the Code” github URL listed below, mark or Ctrl-A to select all of the text, and copy the text for the flow to your Clipboard. Recall from a previous section, click on the Node-RED Menu, then Import, then Clipboard. Paste the text of the flow into the Import nodes dialog and press the red Import button. Finally, click on the red **Deploy** button in the upper right corner.
@@ -42,22 +42,25 @@ Open the “Get the Code” github URL listed below, mark or Ctrl-A to select al
 ### Step 3 – Generating and Displaying data in Node-RED Dashboards
 
 The next Node-RED flow - **Dashboard Intro** - uses a variety of UI widgets to display data in the Node-RED Dashboard.  There is a Switch node that turns On/Off a random number generator function node.  The simple random numbers are sent to a line Chart node, a Gauge node, a Slider node, a Text node and, if the number exceeds a threshold, will display an alert notification message.
- ![Node-RED Dashboard Intro](screenshots/Node-RED-Dashboard-Intro-flow.png)
+![Node-RED Dashboard Intro](screenshots/Node-RED-Dashboard-Intro-flow.png)
+
 - Turn to the Node-RED Dashboard browser tab that you launched in Step 2, click on the menu tab (2) in the upper left corner, and select the Introduction tab.
 - On the Introduction dashboard, turn on the **Switch** (3) to start the data visualization.
 - Experiment with / observe the Dashboard controls.
- ![Node-RED Dashboard Intro dashboard](screenshots/Node-RED-Dashboard-Intro.png)
+
+![Node-RED Dashboard Intro dashboard](screenshots/Node-RED-Dashboard-Intro.png)
 
 
-### Step 4 - Plot Raspberry Pi DHT Environmental Sensor Data
+### Step 4 - Plot Environmental Sensor Data
 
-Now that you have learned about Node-RED Dashboard and Chart types, you are ready to plot the real-time Raspberry Pi DHT environmental sensor data.
+Now that you have learned about Node-RED Dashboard and Chart types, you are ready to plot the real-time environmental sensor data.
+
 - Turn to the next flow - **Plot DHT Sensor Data**
-- The **IBM IoT** node is already configured to receive *status* Device Events from the RaspPi Device Type.
-- The **Change** nodes extract the ```msg.payload.d.temp``` and ```msg.payload.d.humidity``` values from the JSON object sent over MQTT from the Raspberry Pi DHT sensor to Watson IoT Platform.
+- The **IBM IoT** node is already configured to receive *status* Device Events from the Raspberry Device Type.
+- The **Change** nodes extract the ```msg.payload.d.temp``` and ```msg.payload.d.humidity``` values from the JSON object sent over MQTT from the ESP8266 DHT sensor to Watson IoT Platform.
 - The environmental sensor values are sent to two charts to plot Temperature and Humidity.
- ![NRD Raspberry Pi DHT chart flow](screenshots/Node-RED-Dashboard-DHT-flow.png)
-- Turn to the Node-RED Dashboard browser tab that you launched in Step 2, click on the tab in the upper left corner, and select the **Raspberry Pi Workshop** tab.
+ ![NRD ESP8266 DHT chart flow](screenshots/Node-RED-Dashboard-DHT-flow.png)
+- Turn to the Node-RED Dashboard browser tab that you launched in Step 2, click on the tab in the upper left corner, and select the **ESP8266 Workshop** tab.
 <p align="center">
 <img height="395" width="282" src="screenshots/NRD-ESP8266-DHT-TempHum-Chart.png">
 </p>
@@ -71,7 +74,7 @@ Often IoT devices and sensors are deployed so that alerts can be triggered when 
 - The Alert message is sent to a **Node-RED Dashboard Notification** node to display in the browser.
 - This flow could be extended to call a **Twilio** node to send a SMS message.  It could raise an alarm in another system by triggering a REST API call to the manufacturing production operations systems.
 
- ![NRD Raspberry Pi sensor data chart flow](screenshots/Node-RED-Dashboard-DHT-flow.png)
+ ![NRD ESP8266 DHT chart flow](screenshots/Node-RED-Dashboard-DHT-flow.png)
 
  - Return to the Node-RED Dashboard **ESP8266 Workshop** tab and increase the temperature of your DHT sensor above 30C.
 

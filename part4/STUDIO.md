@@ -20,6 +20,7 @@ Watson Studio accelerates the machine and deep learning workflows required to in
 - Learn more from the Experts - [Introducing IBM Watson Studio](https://medium.com/ibm-watson/introducing-ibm-watson-studio-e93638f0bb47)
 
 ### Step 1 - Watson Studio
+
 - Watch the [video](https://www.youtube.com/watch?v=OiaIg8Y0R9k) which illustrates how to set up Watson Studio or follow the steps below.
 - Visit Watson Studio at http://dataplatform.ibm.com
 - Login with your IBM Cloud account
@@ -30,12 +31,13 @@ Watson Studio accelerates the machine and deep learning workflows required to in
 ![Watson Studio Welcome screenshot](screenshots/WatsonStudio-Welcome.png)
 
 ### Step 2 - Create a New Project
+
 - Projects are your workspace to organize your resources, such as assets like data, collaborators, and analytic tools like notebooks and models
 - Click on **New project**
 - Make sure to enable **Jupyter Notebooks**
 - Press the **OK** button.
 ![Watson Studio New project screenshot](screenshots/WatsonStudio-NewProject.png)
-- Give your Project a name - **ESP8266**
+- Give your Project a name - **RaspberryPi**
 - Press the **Create** button.
 - Press the Settings tab.
 - We need to add an Apache Spark service to the project.
@@ -50,7 +52,7 @@ Watson Studio accelerates the machine and deep learning workflows required to in
 
 - From the top menu, select **Tools**, and then **Notebook**
 - Select **From URL**
-- Give the notebook a name: **ESP8266 DHT IoT Sensor Analytics**
+- Give the notebook a name: **IoT Sensor Analytics**
 - Select **From URL**
 - Import the notebook from this URL
 https://raw.githubusercontent.com/binnes/esp8266Workshop/master/part4/notebooks/ESP8266-DHT-IoT-Sensor-Analytics.ipynb
@@ -73,7 +75,7 @@ https://raw.githubusercontent.com/romeokienzler/developerWorks/master/coursera/b
 - Once it loads, click on the **> Run** button twice.
   ![Watson Studio Apache Bahir notebook run screenshot](screenshots/WatsonStudio-Notebook-ApacheBahir.png)
 
-You are now ready to analyze the ESP8266 IoT historical dataset using a Jupyter notebook and Spark. Proceed to the [Jupyter notebook lab](/part4/JUPYTER.md).
+You are now ready to analyze IoT historical dataset using a Jupyter notebook and Spark. Proceed to the [Jupyter notebook lab](/part4/JUPYTER.md).
 
 *Quick links :*
 [Home](/README.md) - [Part 1](/part1/README.md) - [Part 2](/part2/README.md) - [Part 3](/part3/README.md) - [**Part 4**](/part4/README.md)
