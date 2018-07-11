@@ -83,8 +83,8 @@ Power up the Raspberry Pi by connecting the micro USB connector from a power ada
 
 In the following commands replace `<hostname>` with the hostname of your Raspberry Pi:
 
-- Command line : in a terminal (or putty if on windows) use command `ssh pi@<hostname>.local`
-- VNC : Launch the application and enter `<hostname>.local` as the Raspberry Pi server name
+- Command line : in a terminal (or [putty](http://www.putty.org/) if on windows) use command `ssh pi@<hostname>.local`
+- [VNC](https://www.raspberrypi.org/documentation/remote-access/vnc/) : Launch the application and enter `<hostname>.local` as the Raspberry Pi server name
 - Node-RED : In a browser enter `http://<hostname>.local:1880` as the URL
 
 ***
